@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.stream.Stream;
 
 public class StreamSorter {
+	
 	public static void main(String[] args) {
 		Integer[] nums = new Integer[50];
 		for(int i = 0; i < nums.length; i++) {
@@ -13,10 +14,17 @@ public class StreamSorter {
 		}
 		
 		//1. Convert the Integer array to Stream object.
+		Stream<Integer> ints = Arrays.stream(nums);
+		
 		
 		//2. Use the sorted method of the stream to sort the numbers.
 		
+		
+		
 		//3. Use the forEach method with a lambda to print all the elements of the sorted Stream.
 		//   They should be in ascending order.
+		ints.sorted().forEach((f)-> System.out.println(f));
+		
+		
 	}
 }
